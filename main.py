@@ -3,9 +3,15 @@ import pygame
 active = True
 
 window = pygame.display.set_mode((1200, 700))
+pygame.display.set_caption("AviatIo")
+
 fon = pygame.image.load("fon.png")
 fon = pygame.transform.scale(fon, (1200, 700))
-plane = pygame.image.load("samalet_neutral.png")
+
+plane = pygame.image.load("plane_none.png")
+
+icon = pygame.image.load("icon.png")
+pygame.display.set_icon(icon)
 
 x = 500
 y = 250
@@ -26,5 +32,7 @@ while active:
                 y -= 25
             if ev.key == pygame.K_s:
                 y += 25
+
+    pygame.display.update()
 
     pygame.display.update()
